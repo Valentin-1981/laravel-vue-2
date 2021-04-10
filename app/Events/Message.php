@@ -24,6 +24,8 @@ class Message implements ShouldBroadcast
     public function __construct($message)
     {
         $this->message = $message;
+
+        $this->dontBroadcastToCurrentUser();
     }
 
     /**
